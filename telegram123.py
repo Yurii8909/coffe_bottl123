@@ -11,7 +11,7 @@ import os
 
 # НАЛАШТУВАННЯ
 
-TOKEN = "8785080988:AAFmbNUgjp6nyIZ7W1pMFwAHMR7toya_LPA"  # твій новий токен
+TOKEN = "8785080988:AAFmbNUgjp6nyIZ7W1pMFwAHMR7toya_LPA"  
 bot = telebot.TeleBot(TOKEN)
 
 orders = {}  # {chat_id: [item1, item2, ...]}
@@ -19,7 +19,7 @@ reserved_tables = set()
 TABLES_FILE = "reserved_tables.json"
 
 
-# ФУНКЦІЇ ДЛЯ БРОНЮВАННЯ СТОЛИКІВ (зберігання в файл)
+# ФУНКЦІЇ ДЛЯ БРОНЮВАННЯ СТОЛИКІВ 
 
 def load_reserved_tables():
     global reserved_tables
@@ -456,7 +456,7 @@ if __name__ == "__main__":
     
     print("Перевіряємо підключення до Telegram...")
     try:
-        bot.get_me()  # тестовий запит — якщо пройде, токен живий
+        bot.get_me()  
         print("OK! Токен валідний, бот онлайн.")
     except telebot.apihelper.ApiTelegramException as e:
         print(f"ПОМИЛКА ТОКЕНА: {e}")
