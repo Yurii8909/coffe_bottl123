@@ -11,7 +11,7 @@ import os
 
 # НАЛАШТУВАННЯ
 
-TOKEN = "8785080988:AAFmbNUgjp6nyIZ7W1pMFwAHMR7toya_LPA"  
+TOKEN = os.getenv("BOT_TOKEN") 
 bot = telebot.TeleBot(TOKEN)
 
 orders = {}  # {chat_id: [item1, item2, ...]}
